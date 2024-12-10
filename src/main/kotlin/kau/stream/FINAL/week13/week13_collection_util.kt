@@ -133,7 +133,7 @@ val s = setOf("red", "green", "blue", "green")
 s.filter {it.length > 3} -> 길이가 3보다 큰 blue, green 이 필터링 됨
 
 val map = mapOf("I" to 1, "V" to 5, "X" to 10, "L" to 50)
-map.filter {it.value > 5} -> value 가 5보다 큰 10, 50 이 필터링 됨
+map.filter {it.value > 5} // -> value 가 5보다 큰 10, 50 이 필터링 됨
 
 val arrList = ArrayList<String>()
 s.filterTo(arrList) { it.length > 3 } -> 길이가 3보다 큰 것들을 (to) arrList에 삽입해라
@@ -314,5 +314,6 @@ fun main() {
 //    l6.removeAt(0)
 //    println(l6)
 
-
+    val map = mapOf("I" to 1, "V" to 5, "X" to 10, "L" to 50)
+    println( map.filter {it.value > 5} )// -> value 가 5보다 큰 10, 50 이 필터링 됨
 }
